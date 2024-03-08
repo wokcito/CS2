@@ -1,0 +1,14 @@
+{
+	"name": "@cs2/eslint-config-custom",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Custom eslint configuration to this repository",
+	"main": ".eslintrc.js",
+	"author": "Maximiliano Kazanski",
+	"devDependencies": {
+		"@vercel/style-guide": "6.0.0",
+		"eslint": "8.57.0",
+		"eslint-config-standard": "17.1.0",
+		"eslint-config-standard-with-typescript": "43.0.1"
+	}
+}
