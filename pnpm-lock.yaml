@@ -35,6 +35,9 @@ importers:
 
   packages/dmarket:
     dependencies:
+      tweetnacl:
+        specifier: 1.0.3
+        version: 1.0.3
       zod:
         specifier: 3.22.4
         version: 3.22.4
@@ -4985,6 +4988,10 @@ packages:
       turbo-linux-arm64: 1.12.5
       turbo-windows-64: 1.12.5
       turbo-windows-arm64: 1.12.5
+    dev: false
+
+  /tweetnacl@1.0.3:
+    resolution: {integrity: sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==}
     dev: false
 
   /type-check@0.4.0:
