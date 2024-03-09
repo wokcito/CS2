@@ -16,5 +16,13 @@ export const isHexString = isNotEmptyString
 	.toLowerCase()
 	.refine(value => value.match(regExpHexadecimal) !== null)
 
+/**
+ * Validates if a string is a valid DMarket's private key
+ */
+export const isValidPrivateKey = isNotEmptyString
+	.toLowerCase()
+	.length(128)
+	.refine(value => value.match(regExpHexadecimal) !== null)
+
 export const isUint8Array = z
 	.instanceof(Uint8Array)
