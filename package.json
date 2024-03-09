@@ -2,7 +2,10 @@
 	"name": "cs2",
 	"version": "0.0.0",
 	"description": "",
-	"scripts": {},
+	"scripts": {
+		"change": "changeset add",
+		"preinstall": "npx only-allow pnpm"
+	},
 	"author": "Maximiliano Kazanski",
 	"dependencies": {
 		"@changesets/cli": "2.27.1",
