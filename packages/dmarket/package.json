@@ -1,0 +1,32 @@
+{
+	"name": "@cs2/dmarket",
+	"version": "0.0.0",
+	"description": "Wrapper library for DMarket's API",
+	"main": "dist/index.js",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc --p tsconfig.build.json",
+		"test": "vitest run",
+		"test:watch": "vitest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wokcito/CS2"
+	},
+	"bugs": {
+		"url": "https://github.com/wokcito/CS2/issues"
+	},
+	"keywords": [
+		"dmarket",
+		"cs2",
+		"csgo",
+		"wrapper"
+	],
+	"author": "Maximiliano Kazanski",
+	"license": "MIT",
+	"devDependencies": {
+		"@cs2/eslint-config-custom": "workspace:*"
+	}
+}

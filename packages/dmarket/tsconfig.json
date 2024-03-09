@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+        "removeComments": true,
+		"types": ["vitest/globals"],
+        "declaration": true,
+        "outDir": "./dist",
+        "sourceMap": true,
+        "target": "es2022",
+		"noImplicitAny": true,
+		"noUnusedLocals": true,
+		"strict": true,
+		"strictNullChecks": true,
+		"strictPropertyInitialization": true,
+		"useUnknownInCatchVariables": true,
+		"skipLibCheck": true
+	}
+}
