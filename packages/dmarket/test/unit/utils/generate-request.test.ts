@@ -1,9 +1,9 @@
-import {
-	generateRequest,
-	AvailableMethods,
-	type GenerateRequestSchema
-} from '@utils/index'
+import { type z } from 'zod'
+import { generateRequest, type GenerateRequestSchema } from '@utils/index'
 import { BASE_URL, DMAR_ED25519 } from '@utils/constants'
+import { type isValidMethod } from '@utils/zod-validators'
+
+type METHOD = z.infer<typeof isValidMethod>
 
 describe('generateRequest', () => {
 	const XApiKey = 'x-api-key'
@@ -13,7 +13,7 @@ describe('generateRequest', () => {
 
 	const data: GenerateRequestSchema = {
 		route: '/route',
-		method: AvailableMethods.GET,
+		method: 'GET',
 		publicKey: '8397eb8e7f88032eb13dca99a11350b05d290c896a96afd60b119184b1b443c9',
 		timestamp: 1000000000,
 		signature: 'signature'
@@ -41,16 +41,16 @@ describe('generateRequest', () => {
 		[''],
 		[undefined]
 	])('should verify if \'method\' was sent', (method) => {
-		expect(() => generateRequest({ ...data, method: method as AvailableMethods })).toThrow()
+		expect(() => generateRequest({ ...data, method: method as METHOD })).toThrow()
 	})
 
 	it.each([
-		[AvailableMethods.GET],
-		[AvailableMethods.POST],
-		[AvailableMethods.DELETE],
-		[AvailableMethods.PATCH]
+		['GET'],
+		['POST'],
+		['DELETE'],
+		['PATCH']
 	])('should return a request with the method sent', (method) => {
-		const request = generateRequest({ ...data, method })
+		const request = generateRequest({ ...data, method: method as METHOD })
 		expect(request.method).toBe(method)
 	})
 
