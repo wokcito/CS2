@@ -26,7 +26,11 @@
 	],
 	"author": "Maximiliano Kazanski",
 	"license": "MIT",
+	"dependencies": {
+		"zod": "3.22.4"
+	},
 	"devDependencies": {
-		"@cs2/eslint-config-custom": "workspace:*"
+		"@cs2/eslint-config-custom": "workspace:*",
+		"vite-tsconfig-paths": "4.3.1"
 	}
 }

@@ -1,8 +1,12 @@
 {
 	"compilerOptions": {
+		"baseUrl": ".",
 		"module": "commonjs",
         "removeComments": true,
 		"types": ["vitest/globals"],
+		"paths": {
+			"@utils/*": ["src/utils/*"]
+		},
         "declaration": true,
         "outDir": "./dist",
         "sourceMap": true,
