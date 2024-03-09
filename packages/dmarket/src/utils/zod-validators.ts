@@ -44,3 +44,6 @@ export const isTimestamp = isNumber
 
 export const isUint8Array = z
 	.instanceof(Uint8Array)
+
+export const isValidMethod = z
+	.enum(['GET', 'POST', 'DELETE', 'PATCH'])

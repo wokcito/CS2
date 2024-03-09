@@ -2,15 +2,15 @@ import { z } from 'zod'
 import {
 	isNotEmptyString,
 	isTimestamp,
+	isValidMethod,
 	isValidPublicKey,
 	isValidRoute
 } from './zod-validators'
 import { BASE_URL, DMAR_ED25519 } from './constants'
-import { AvailableMethods } from './types'
 
 export const schema = z.object({
 	route: isValidRoute,
-	method: z.nativeEnum(AvailableMethods),
+	method: isValidMethod,
 	publicKey: isValidPublicKey,
 	timestamp: isTimestamp,
 	signature: isNotEmptyString
