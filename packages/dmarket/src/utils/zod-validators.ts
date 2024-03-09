@@ -15,3 +15,6 @@ export const isNotEmptyString = isString
 export const isHexString = isNotEmptyString
 	.toLowerCase()
 	.refine(value => value.match(regExpHexadecimal) !== null)
+
+export const isUint8Array = z
+	.instanceof(Uint8Array)
