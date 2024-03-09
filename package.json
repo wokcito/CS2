@@ -2,12 +2,29 @@
 	"name": "cs2",
 	"version": "0.0.0",
 	"description": "",
-	"scripts": {},
+	"scripts": {
+		"change": "changeset add",
+		"preinstall": "npx only-allow pnpm"
+	},
 	"author": "Maximiliano Kazanski",
 	"dependencies": {
 		"@changesets/cli": "2.27.1",
+		"@commitlint/cli": "19.0.3",
+		"@commitlint/config-conventional": "19.0.3",
+		"husky": "9.0.11",
+		"lint-staged": "15.2.2",
 		"turbo": "1.12.5",
 		"typescript": "5.4.2",
 		"vitest": "1.3.1"
+	},
+	"lint-staged": {
+		"packages/**/*.{js,ts}": [
+			"eslint --fix"
+		]
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
 	}
 }
