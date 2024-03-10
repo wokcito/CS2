@@ -4,7 +4,9 @@
 	"description": "",
 	"scripts": {
 		"change": "changeset add",
-		"preinstall": "npx only-allow pnpm"
+		"build": "turbo run build",
+		"preinstall": "npx only-allow pnpm",
+		"prepare": "husky"
 	},
 	"author": "Maximiliano Kazanski",
 	"dependencies": {
