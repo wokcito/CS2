@@ -1,5 +1,11 @@
 # @cs2/dmarket
 
+## 0.1.1
+
+### Patch Changes
+
+- 263ab99: Fix error that caused `Unauthorized` responses if the body was `undefined`
+
 ## 0.1.0
 
 ### Minor Changes
