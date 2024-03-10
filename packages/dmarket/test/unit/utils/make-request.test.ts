@@ -91,6 +91,19 @@ describe('makeRequest', () => {
 		await expect(makeRequest({ ...data, body: body as unknown as string })).rejects.toThrow()
 	})
 
+	it('should replace \'body\' for an empty string if it is undefined', async () => {
+		const { privateKey, method, route } = data
+		const timestamp = getTimestamp()
+		vi.spyOn(utils, 'getTimestamp').mockReturnValue(timestamp)
+		const spy = vi.spyOn(utils, 'generateSignature')
+		await makeRequest({ ...data, body: undefined })
+
+		expect(spy).toHaveBeenCalledWith({
+			privateKey,
+			string: method + route + timestamp
+		})
+	})
+
 	it('should sign the method, route, body and timestamp with the private key', async () => {
 		const { privateKey, method, route, body } = data
 		const timestamp = getTimestamp()
