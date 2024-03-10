@@ -32,6 +32,7 @@
 	},
 	"devDependencies": {
 		"@cs2/eslint-config-custom": "workspace:*",
+		"msw": "2.2.3",
 		"vite-tsconfig-paths": "4.3.1"
 	}
 }
