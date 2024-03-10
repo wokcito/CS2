@@ -33,7 +33,7 @@ export async function makeRequest <T = unknown> (data: MakeRequestSchema): Promi
 	const timestamp = getTimestamp()
 	const signature = generateSignature({
 		privateKey,
-		string: method + route + body + timestamp
+		string: method + route + `${body ?? ''}` + timestamp
 	})
 	const request = generateRequest({
 		route,
