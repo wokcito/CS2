@@ -1,5 +1,24 @@
 # @cs2/dmarket
 
+## 0.2.0
+
+### Minor Changes
+
+- 49da39a: Add support to '/account/v1' routes
+
+  The following methods are now available
+
+  - `.account.user()`
+  - `.account.balance()`
+
+- 49da39a: Add 'createContext' utility
+- 49da39a: Add 'createDMarketClient' utility
+
+### Patch Changes
+
+- 49da39a: Delete 'generateRequest' utility
+- 49da39a: Delete 'makeRequest' utility
+
 ## 0.1.1
 
 ### Patch Changes
