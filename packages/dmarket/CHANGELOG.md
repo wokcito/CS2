@@ -1,5 +1,11 @@
 # @cs2/dmarket
 
+## 0.2.2
+
+### Patch Changes
+
+- 09a355a: Sort methods in ascending order
+
 ## 0.2.1
 
 ### Patch Changes
