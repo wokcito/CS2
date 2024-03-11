@@ -1,5 +1,13 @@
 # @cs2/dmarket
 
+## 0.2.1
+
+### Patch Changes
+
+- 3b053a2: Remove `removeComments` from tsconfig.json
+
+  Now JSDoc comments are available
+
 ## 0.2.0
 
 ### Minor Changes

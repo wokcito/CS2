@@ -1,6 +1,6 @@
 {
 	"name": "@cs2/dmarket",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "Wrapper library for DMarket's API",
 	"main": "dist/index.js",
 	"files": [
