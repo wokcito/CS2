@@ -26,19 +26,19 @@ export function createDMarketClient (config: DMarketConfig) {
 
 	const account = Object.freeze({
 		/**
-		 * Getting general user profile information
-		 *
-		 * @see {@link https://docs.dmarket.com/v1/swagger.html#/Account/getUserByTokenHandler}
-		 */
-		user: modules.account.user(context),
-		/**
 		 * Getting the current USD & DMC balance that is available for trading items / buying subscriptions.
 		 *
 		 * The response format is in coins (cents for USD, dimoshi for DMC).
 		 *
 		 * @see {@link https://docs.dmarket.com/v1/swagger.html#/Account/getUserBalance}
 		 */
-		balance: modules.account.balance(context)
+		balance: modules.account.balance(context),
+		/**
+		 * Getting general user profile information
+		 *
+		 * @see {@link https://docs.dmarket.com/v1/swagger.html#/Account/getUserByTokenHandler}
+		 */
+		user: modules.account.user(context)
 	})
 
 	return {
